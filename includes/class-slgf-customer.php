@@ -95,4 +95,22 @@ class SLGF_Customer extends SLGF_Base_Post_Type {
 				break;
 		}
 	}
+
+	/**
+	 * Handles post row actions link.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @param  array   $actions Array of row actions links.
+	 * @param  WP_Post $post The post object.
+	 *
+	 * @return array Modified array.
+	 */
+	public function row_actions( $actions, $post ) {
+		if ( $post->post_type === $this->post_type ) {
+			unset( $actions['view'] );
+			unset( $actions['preview'] );
+		}
+		return $actions;
+	}
 }
