@@ -131,7 +131,7 @@
       .slgf-form button {
         width: 70%;
         margin-left: 30%; } }
-    .slgf-form button.loading, .slgf-form button:disabled, .slgf-form button:hover {
+    .slgf-form button.is-loading, .slgf-form button:disabled, .slgf-form button:hover {
       background: #767676; }
     .slgf-form button:focus {
       outline: none; }
@@ -146,11 +146,11 @@
       border-top-color: #fff;
       -webkit-animation: spin 1s ease-in-out infinite;
               animation: spin 1s ease-in-out infinite; }
-    .slgf-form button.loading {
+    .slgf-form button.is-loading {
       padding: 0; }
-      .slgf-form button.loading .text {
+      .slgf-form button.is-loading .text {
         display: none; }
-      .slgf-form button.loading .spinner {
+      .slgf-form button.is-loading .spinner {
         display: inline-block; }
   .slgf-form .slgf-alertbox {
     position: relative;

@@ -165,7 +165,7 @@ $breakpoint-large: 60em; // 960px
             width: 70%;
             margin-left: 30%;
         }
-        &.loading,
+        &.is-loading,
         &:disabled,
         &:hover {
             background: #767676;
@@ -184,7 +184,7 @@ $breakpoint-large: 60em; // 960px
             border-top-color: #fff;
             animation: spin 1s ease-in-out infinite;
         }
-        &.loading {
+        &.is-loading {
             padding: 0;
             .text {
                 display: none;
