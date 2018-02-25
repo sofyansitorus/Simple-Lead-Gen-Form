@@ -1,0 +1,259 @@
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+.slgf-form {
+    * {
+        box-sizing: border-box;
+    }
+    position: relative;
+    max-width: 100%s;
+    padding: 15px;
+    font-family: "Helvetica Neue",
+    helvetica,
+    arial,
+    sans-serif;
+    color: #333;
+    label,
+    button,
+    input,
+    textarea {
+        margin: 0;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.15;
+    }
+    button,
+    input,
+    textarea {
+        overflow: visible;
+    }
+    .slgf-row {
+        position: relative;
+        margin-bottom: 15px;
+        label {
+            color: #333;
+            display: block;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            @media only screen and (min-width: $breakpoint-med) {
+                width: 30%;
+                float: left;
+                text-align: right;
+                padding-right: 15px;
+            }
+        }
+        .slgf-field-wrap {
+            display: block;
+            width: 100%;
+            position: relative;
+            @media only screen and (min-width: $breakpoint-med) {
+                width: 70%;
+                margin-left: 30%;
+            }
+            &::after {
+                position: absolute;
+                z-index: 2;
+                right: 10px;
+                top: 16px;
+            }
+        }
+        .slgf-field {
+            width: 100%;
+            color: #666;
+            background: #fff;
+            background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            display: block;
+            padding: 0.7em 2em 0.7em 0.7em;
+            &textarea {
+                overflow: auto;
+            }
+            &[type="number"]::-webkit-inner-spin-button,
+            &[type="number"]::-webkit-outer-spin-button {
+                height: auto;
+            }
+            &:focus {
+                color: #222;
+                border-color: #333;
+                outline: none;
+            }
+        }
+        .slgf-field-error {
+            font-size: small;
+            color: #f03;
+        }
+        &.valid {
+            .slgf-field-wrap {
+                &::after {
+                    content: " ";
+                    display: block;
+                    width: 0.3em; // the short bar of the mark is half as long as the long bar
+                    height: 0.8em;
+                    border: solid #a6ca8a;
+                    border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
+                    position: absolute;
+                    right: 1em;
+                    top: 17px;
+                    margin-top: -0.4em;
+                    transform: rotate(45deg);
+                }
+            }
+            .slgf-field {
+                border-color: #a6ca8a !important;
+            }
+        }
+        &.error {
+            .slgf-field-wrap {
+                &:before,
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    right: 1em;
+                    top: 10px;
+                    height: 1.2em;
+                    width: 0.2em;
+                    background-color: #f5aca6;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            .slgf-field {
+                border-color: #f5aca6 !important;
+            }
+        }
+        &.is-required {
+            label {
+                &:after {
+                    content: " *";
+                    color: #d81818;
+                }
+            }
+        }
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    button {
+        width: 100%;
+        height: 42px;
+        margin: 0 0 15px 0;
+        padding: 1em 2em;
+        background-color: #222;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: none;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-shadow: none;
+        transition: background 0.2s;
+        position: relative;
+        -webkit-appearance: button;
+        @media only screen and (min-width: $breakpoint-med) {
+            width: 70%;
+            margin-left: 30%;
+        }
+        &.loading,
+        &:disabled,
+        &:hover {
+            background: #767676;
+        }
+        &:focus {
+            outline: none;
+        }
+        .spinner {
+            display: none;
+            position: absolute;
+            top: 12px;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        &.loading {
+            padding: 0;
+            .text {
+                display: none;
+            }
+            .spinner {
+                display: inline-block;
+            }
+        }
+    }
+    .slgf-alertbox {
+        position: relative;
+        border: 1px solid #fff;
+        padding: 1em 1em 1em 2.6em;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        display: none;
+        width: 100%;
+        @media only screen and (min-width: $breakpoint-med) {
+            width: 70%;
+            margin-left: 30%;
+        }
+        &.success {
+            border-color: #a6ca8a;
+            background-color: #e9ffd9;
+            &:before {
+                content: " ";
+                display: block;
+                width: 0.6em; // the short bar of the mark is half as long as the long bar
+                height: 1.2em;
+                border: solid #a6ca8a;
+                border-width: 0 0.3em 0.3em 0; // creates the inverted "L" shape
+                position: absolute;
+                left: 1em;
+                top: 17px;
+                margin-top: -0.4em;
+                transform: rotate(45deg);
+            }
+        }
+        &.error {
+            border-color: #f5aca6;
+            background-color: #ffecec;
+            &:before,
+            &:after {
+                position: absolute;
+                left: 1em;
+                top: 17px;
+                content: " ";
+                height: 1.2em;
+                width: 0.3em;
+                background-color: #f5aca6;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

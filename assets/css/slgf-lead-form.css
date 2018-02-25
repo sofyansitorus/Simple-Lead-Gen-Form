@@ -1,0 +1,209 @@
+.slgf-form {
+  position: relative;
+  max-width: 100%s;
+  padding: 15px;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #333; }
+  .slgf-form * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .slgf-form label,
+  .slgf-form button,
+  .slgf-form input,
+  .slgf-form textarea {
+    margin: 0;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.15; }
+  .slgf-form button,
+  .slgf-form input,
+  .slgf-form textarea {
+    overflow: visible; }
+  .slgf-form .slgf-row {
+    position: relative;
+    margin-bottom: 15px; }
+    .slgf-form .slgf-row label {
+      color: #333;
+      display: block;
+      font-weight: bold;
+      text-align: left;
+      cursor: pointer; }
+      @media only screen and (min-width: 45em) {
+        .slgf-form .slgf-row label {
+          width: 30%;
+          float: left;
+          text-align: right;
+          padding-right: 15px; } }
+    .slgf-form .slgf-row .slgf-field-wrap {
+      display: block;
+      width: 100%;
+      position: relative; }
+      @media only screen and (min-width: 45em) {
+        .slgf-form .slgf-row .slgf-field-wrap {
+          width: 70%;
+          margin-left: 30%; } }
+      .slgf-form .slgf-row .slgf-field-wrap::after {
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        top: 16px; }
+    .slgf-form .slgf-row .slgf-field {
+      width: 100%;
+      color: #666;
+      background: #fff;
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+      border: 1px solid #bbb;
+      border-radius: 3px;
+      display: block;
+      padding: 0.7em 2em 0.7em 0.7em; }
+      .slgf-form .slgf-row .slgf-fieldtextarea {
+        overflow: auto; }
+      .slgf-form .slgf-row .slgf-field[type="number"]::-webkit-inner-spin-button, .slgf-form .slgf-row .slgf-field[type="number"]::-webkit-outer-spin-button {
+        height: auto; }
+      .slgf-form .slgf-row .slgf-field:focus {
+        color: #222;
+        border-color: #333;
+        outline: none; }
+    .slgf-form .slgf-row .slgf-field-error {
+      font-size: small;
+      color: #f03; }
+    .slgf-form .slgf-row.valid .slgf-field-wrap::after {
+      content: " ";
+      display: block;
+      width: 0.3em;
+      height: 0.8em;
+      border: solid #a6ca8a;
+      border-width: 0 0.2em 0.2em 0;
+      position: absolute;
+      right: 1em;
+      top: 17px;
+      margin-top: -0.4em;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .slgf-form .slgf-row.valid .slgf-field {
+      border-color: #a6ca8a !important; }
+    .slgf-form .slgf-row.error .slgf-field-wrap:before, .slgf-form .slgf-row.error .slgf-field-wrap:after {
+      content: " ";
+      position: absolute;
+      right: 1em;
+      top: 10px;
+      height: 1.2em;
+      width: 0.2em;
+      background-color: #f5aca6; }
+    .slgf-form .slgf-row.error .slgf-field-wrap:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .slgf-form .slgf-row.error .slgf-field-wrap:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .slgf-form .slgf-row.error .slgf-field {
+      border-color: #f5aca6 !important; }
+    .slgf-form .slgf-row.is-required label:after {
+      content: " *";
+      color: #d81818; }
+    .slgf-form .slgf-row::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .slgf-form button {
+    width: 100%;
+    height: 42px;
+    margin: 0 0 15px 0;
+    padding: 1em 2em;
+    background-color: #222;
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: none;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    position: relative;
+    -webkit-appearance: button; }
+    @media only screen and (min-width: 45em) {
+      .slgf-form button {
+        width: 70%;
+        margin-left: 30%; } }
+    .slgf-form button.loading, .slgf-form button:disabled, .slgf-form button:hover {
+      background: #767676; }
+    .slgf-form button:focus {
+      outline: none; }
+    .slgf-form button .spinner {
+      display: none;
+      position: absolute;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      -webkit-animation: spin 1s ease-in-out infinite;
+              animation: spin 1s ease-in-out infinite; }
+    .slgf-form button.loading {
+      padding: 0; }
+      .slgf-form button.loading .text {
+        display: none; }
+      .slgf-form button.loading .spinner {
+        display: inline-block; }
+  .slgf-form .slgf-alertbox {
+    position: relative;
+    border: 1px solid #fff;
+    padding: 1em 1em 1em 2.6em;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: none;
+    width: 100%; }
+    @media only screen and (min-width: 45em) {
+      .slgf-form .slgf-alertbox {
+        width: 70%;
+        margin-left: 30%; } }
+    .slgf-form .slgf-alertbox.success {
+      border-color: #a6ca8a;
+      background-color: #e9ffd9; }
+      .slgf-form .slgf-alertbox.success:before {
+        content: " ";
+        display: block;
+        width: 0.6em;
+        height: 1.2em;
+        border: solid #a6ca8a;
+        border-width: 0 0.3em 0.3em 0;
+        position: absolute;
+        left: 1em;
+        top: 17px;
+        margin-top: -0.4em;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+    .slgf-form .slgf-alertbox.error {
+      border-color: #f5aca6;
+      background-color: #ffecec; }
+      .slgf-form .slgf-alertbox.error:before, .slgf-form .slgf-alertbox.error:after {
+        position: absolute;
+        left: 1em;
+        top: 17px;
+        content: " ";
+        height: 1.2em;
+        width: 0.3em;
+        background-color: #f5aca6; }
+      .slgf-form .slgf-alertbox.error:before {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .slgf-form .slgf-alertbox.error:after {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
