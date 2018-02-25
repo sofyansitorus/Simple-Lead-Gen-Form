@@ -174,8 +174,8 @@ class SLGF_Base_Metabox {
 		foreach ( $this->metabox_fields() as $key => $field ) {
 			// Get posted data.
 			$value = $this->data_post( $key, $field['sanitize_cb'] );
-			if ( $value && ! empty( $field['presave_value_cb'] ) && is_callable( $field['presave_value_cb'] ) ) {
-				$value = call_user_func( $field['presave_value_cb'], $value, $field, $post, $update );
+			if ( $value && ! empty( $field['value_presave_cb'] ) && is_callable( $field['value_presave_cb'] ) ) {
+				$value = call_user_func( $field['value_presave_cb'], $value, $field, $post, $update );
 			}
 			update_post_meta( $post_id, $key, $value );
 			if ( ! empty( $field['core_field'] ) ) {
@@ -216,8 +216,8 @@ class SLGF_Base_Metabox {
 				'type'             => 'text',
 				'sanitize_cb'      => null,
 				'render_cb'        => null,
-				'format_value_cb'  => null,
-				'presave_value_cb' => null,
+				'value_input_cb'  => null,
+				'value_presave_cb' => null,
 				'core_field'       => null,
 				'default_value'    => '',
 				'options'          => array(),
@@ -240,12 +240,12 @@ class SLGF_Base_Metabox {
 			$field['render_cb'] = array( $this, 'render_text_field' );
 		}
 
-		if ( $field['format_value_cb'] && ! is_callable( $field['format_value_cb'] ) ) {
-			$field['format_value_cb'] = null;
+		if ( $field['value_input_cb'] && ! is_callable( $field['value_input_cb'] ) ) {
+			$field['value_input_cb'] = null;
 		}
 
-		if ( $field['presave_value_cb'] && ! is_callable( $field['presave_value_cb'] ) ) {
-			$field['presave_value_cb'] = null;
+		if ( $field['value_presave_cb'] && ! is_callable( $field['value_presave_cb'] ) ) {
+			$field['value_presave_cb'] = null;
 		}
 
 		return $field;
@@ -265,8 +265,8 @@ class SLGF_Base_Metabox {
 		if ( is_null( $value ) ) {
 			$value = $field['default_value'];
 		}
-		if ( $value && $field['format_value_cb'] ) {
-			$value = call_user_func( $field['format_value_cb'], $value, $field, $post, $callback_args );
+		if ( $value && $field['value_input_cb'] ) {
+			$value = call_user_func( $field['value_input_cb'], $value, $field, $post, $callback_args );
 		}
 		$field_type = in_array(
 			$field['type'], array(
@@ -304,8 +304,8 @@ class SLGF_Base_Metabox {
 		if ( is_null( $value ) ) {
 			$value = $field['default_value'];
 		}
-		if ( $value && $field['format_value_cb'] ) {
-			$value = call_user_func( $field['format_value_cb'], $value, $field, $post, $callback_args );
+		if ( $value && $field['value_input_cb'] ) {
+			$value = call_user_func( $field['value_input_cb'], $value, $field, $post, $callback_args );
 		}
 		?>
 		<textarea name="<?php echo esc_attr( $field['id'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" class="large-text" cols="50" rows="10"><?php echo esc_textarea( $value ); ?></textarea>

@@ -34,6 +34,7 @@
 
             $('form.slgf-form').submit(function (e) {
                 e.preventDefault();
+
                 var $form = $(e.currentTarget);
                 var formData = {};
                 var errors = {};
@@ -67,7 +68,7 @@
                 }
 
                 if (Object.keys(formData).length) {
-                    $form.find("button").addClass("loading").prop("disabled", true);
+                    $form.find("button").addClass("is-loading").prop("disabled", true);
                     self.ajaxGetTime(formData, $form);
                 }
             });
@@ -139,7 +140,7 @@
                 method: "POST",
                 cache: false,
                 success: function (response, textStatus) {
-                    $form.find("button").removeClass("loading").prop("disabled", false);
+                    $form.find("button").removeClass("is-loading").prop("disabled", false);
                     if (response.msg.length) {
                         var msg_class = response.success ? "success" : "error";
                         $form.find(".slgf-alertbox").addClass(msg_class).html(response.msg).show();

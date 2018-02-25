@@ -63,8 +63,8 @@ class SLGF_Customer_Info extends SLGF_Base_Metabox {
 					break;
 				case 'current_date_time':
 					$field['type']             = 'datetime-local';
-					$field['format_value_cb']  = array( $this, 'format_value_current_date_time' );
-					$field['presave_value_cb'] = array( $this, 'presave_value_current_date_time' );
+					$field['value_input_cb']   = array( $this, 'value_input_current_date_time' );
+					$field['value_presave_cb'] = array( $this, 'value_presave_current_date_time' );
 					break;
 			}
 			$fields[ $key ] = $field;
@@ -79,7 +79,7 @@ class SLGF_Customer_Info extends SLGF_Base_Metabox {
 	 * @param mixed $value Raw value.
 	 * @return array Fields data array.
 	 */
-	public function format_value_current_date_time( $value ) {
+	public function value_input_current_date_time( $value ) {
 		return date( 'Y-m-d\TH:i', $value );
 	}
 
@@ -90,7 +90,7 @@ class SLGF_Customer_Info extends SLGF_Base_Metabox {
 	 * @param mixed $value Raw value.
 	 * @return array Fields data array.
 	 */
-	public function presave_value_current_date_time( $value ) {
+	public function value_presave_current_date_time( $value ) {
 		return strtotime( $value );
 	}
 }
