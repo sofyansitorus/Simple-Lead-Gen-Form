@@ -97,6 +97,7 @@ class SLGF_Base_Post_Type {
 		add_action( 'init', array( $this, 'register_post_type' ) );
 		add_filter( 'post_updated_messages', array( $this, 'messages' ) );
 		add_filter( 'bulk_post_updated_messages', array( $this, 'bulk_messages' ), 10, 2 );
+		add_filter( 'post_row_actions', array( $this, 'row_actions' ), 10, 2 );
 		add_filter( 'manage_edit-' . $this->post_type . '_columns', array( $this, 'columns' ) );
 		add_filter( 'manage_edit-' . $this->post_type . '_sortable_columns', array( $this, 'sortable_columns' ) );
 
@@ -314,6 +315,21 @@ class SLGF_Base_Post_Type {
 	public function sortable_columns( $sortable_columns ) {
 		// Placeholder method. Shoulds be overridden by subclass.
 		return $sortable_columns;
+	}
+
+	/**
+	 * Registers which columns are sortable. To be overridden by an extended class.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @param  array   $actions Array of row actions links.
+	 * @param  WP_Post $post The post object.
+	 *
+	 * @return array Modified array.
+	 */
+	public function row_actions( $actions, $post ) {
+		// Placeholder method. Shoulds be overridden by subclass.
+		return $actions;
 	}
 
 	/**
