@@ -36,8 +36,8 @@ class SLGF_Customer_Info extends SLGF_Base_Metabox {
 
 		parent::__construct(
 			array(
-				'id'       => 'dqwqwrqwr',
-				'title'    => 'slgf-customer',
+				'id'       => 'slgf-customer-info',
+				'title'    => __( 'Customer Info', 'slgf' ),
 				'screen'   => 'slgf-customer',
 				'priority' => 'high',
 				'context'  => 'normal',
