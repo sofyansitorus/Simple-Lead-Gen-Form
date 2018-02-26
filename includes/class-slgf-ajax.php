@@ -99,8 +99,9 @@ class SLGF_Ajax {
 	 * @since    0.0.1
 	 * @param string $msg Response error message.
 	 * @param array  $data Response data.
+	 * @param int    $code Response code.
 	 */
-	public function send_response_error( $msg = '', $data = array() ) {
+	public function send_response_error( $msg = '', $data = array(), $code = 400 ) {
 		if ( $data && is_array( $data ) ) {
 			foreach ( $data as $key => $value ) {
 				$this->set_response_data( $key, $value );
@@ -111,6 +112,7 @@ class SLGF_Ajax {
 			'msg'     => $msg,
 			'data'    => $this->response_data,
 		);
+		status_header( $code );
 		wp_send_json( $response );
 	}
 
