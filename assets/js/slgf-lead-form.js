@@ -7,7 +7,7 @@
             var self = this;
 
             var delay;
-            $(document).on("keypress", ".slgf-field", function (e) {
+            $(document).on("keyup keydown", ".slgf-field", function (e) {
                 clearTimeout(delay);
                 delay = setTimeout(function () {
                     var $form = $(e.currentTarget).closest("form");
@@ -112,23 +112,21 @@
                 method: "GET",
                 cache: false,
                 crossDomain: true,
-                success: function (response) {
+                complete: function (jqXHR, textStatus) {
                     try {
                         if (
-                            typeof response.data === "undefined" ||
-                            typeof response.data.datetime === "undefined" ||
-                            typeof response.data.datetime.date_time_txt === "undefined"
+                            typeof jqXHR.responseJSON.data === "undefined" ||
+                            typeof jqXHR.responseJSON.data.datetime === "undefined" ||
+                            typeof jqXHR.responseJSON.data.datetime.date_time_txt === "undefined"
                         ) {
                             throw "Date time is undefined";
                         }
-                        formData['current_date_time'] = response.data.datetime.date_time_txt;
+                        formData['current_date_time'] = jqXHR.responseJSON.data.datetime.date_time_txt;
                         self.ajaxSubmit(formData, $form);
                     } catch (error) {
+                        console.log(error);
                         self.ajaxSubmit(formData, $form);
                     }
-                },
-                error: function () {
-                    self.ajaxSubmit(formData, $form);
                 }
             });
         },
@@ -139,15 +137,19 @@
                 data: formData,
                 method: "POST",
                 cache: false,
-                success: function (response, textStatus) {
+                complete: function (jqXHR, textStatus) {
+                    try {
+                        if (jqXHR.responseJSON.msg.length) {
+                            var msg_class = jqXHR.responseJSON.success ? "success" : "error";
+                            $form.find(".slgf-alertbox").addClass(msg_class).html(jqXHR.responseJSON.msg).show();
+                        }
+                        if (jqXHR.responseJSON.success) {
+                            $form.find(".slgf-field").val("");
+                        }
+                    } catch (error) {
+                        console.log(error);
+                    }
                     $form.find("button").removeClass("is-loading").prop("disabled", false);
-                    if (response.msg.length) {
-                        var msg_class = response.success ? "success" : "error";
-                        $form.find(".slgf-alertbox").addClass(msg_class).html(response.msg).show();
-                    }
-                    if (response.success) {
-                        $form.find(".slgf-field").val("");
-                    }
                     $form.find(".slgf-row").removeClass("error valid");
                 }
             });
