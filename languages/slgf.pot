@@ -1,0 +1,452 @@
+# Copyright (C) 2018 Simple Lead Gen Form
+# This file is distributed under the same license as the Simple Lead Gen Form package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Lead Gen Form 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/slgf\n"
+"POT-Creation-Date: 2018-02-26 06:54:03+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-slgf-ajax.php:231
+msgid "Invalid Request"
+msgstr ""
+
+#: includes/class-slgf-base-metabox.php:72
+msgid "It is required to pass ID of metabox"
+msgstr ""
+
+#: includes/class-slgf-base-metabox.php:76
+msgid "It is required to pass title of metabox"
+msgstr ""
+
+#: includes/class-slgf-base-post-type.php:79
+#: includes/class-slgf-base-post-type.php:83
+#: includes/class-slgf-base-post-type.php:87
+msgid "It is required to pass a single, plural and slug string to SLGF_CPT_Base"
+msgstr ""
+
+#. translators: %s Post type singular name.
+#. translators: %s Taxonomy singular name.
+
+#: includes/class-slgf-base-post-type.php:147
+#: includes/class-slgf-base-post-type.php:149
+#: includes/class-slgf-base-taxonomy.php:132
+msgid "Add New %s"
+msgstr ""
+
+#. translators: %s Post type singular name.
+#. translators: %s Taxonomy singular name.
+
+#: includes/class-slgf-base-post-type.php:151
+#: includes/class-slgf-base-taxonomy.php:126
+msgid "Edit %s"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:153
+msgid "New %s"
+msgstr ""
+
+#. translators: %s Post type plural name.
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-post-type.php:155
+#: includes/class-slgf-base-taxonomy.php:124
+msgid "All %s"
+msgstr ""
+
+#. translators: %s Post type singular name.
+#. translators: %s Taxonomy singular name.
+
+#: includes/class-slgf-base-post-type.php:157
+#: includes/class-slgf-base-taxonomy.php:128
+msgid "View %s"
+msgstr ""
+
+#. translators: %s Post type plural name.
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-post-type.php:159
+#: includes/class-slgf-base-taxonomy.php:122
+msgid "Search %s"
+msgstr ""
+
+#. translators: %s Post type plural name.
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-post-type.php:161
+#: includes/class-slgf-base-taxonomy.php:138
+msgid "No %s"
+msgstr ""
+
+#. translators: %s Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:163
+msgid "No %s found in Trash"
+msgstr ""
+
+#. translators: %s Post type singular name.
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-post-type.php:165
+#: includes/class-slgf-base-taxonomy.php:144
+msgid "Parent %s:"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:168
+msgid "Insert into %s"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:170
+msgid "Uploaded to this %s"
+msgstr ""
+
+#. translators: %s Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:172
+msgid "%s list"
+msgstr ""
+
+#. translators: %s Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:174
+msgid "%s list navigation"
+msgstr ""
+
+#. translators: %s Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:176
+msgid "Filter %s list"
+msgstr ""
+
+#: includes/class-slgf-base-post-type.php:229
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/class-slgf-base-post-type.php:230
+msgid "Custom field deleted."
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:232
+#: includes/class-slgf-base-post-type.php:253
+msgid "%1$s updated."
+msgstr ""
+
+#. translators: %s: date and time of the revision
+
+#: includes/class-slgf-base-post-type.php:234
+msgid "%1$s restored to revision from %2$s"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:236
+msgid "%1$s saved."
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:241
+msgid "%1$s updated. <a href=\"%2$s\">View %1$s</a>"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:243
+msgid "%1$s published. <a href=\"%2$s\">View %1$s</a>"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:245
+msgid "%1$s submitted. <a target=\"_blank\" href=\"%2$s\">Preview %1$s</a>"
+msgstr ""
+
+#. translators: Publish box date format, see http:php.net/date.
+
+#: includes/class-slgf-base-post-type.php:247
+msgid "%1$s scheduled for: <strong>%2$s</strong>. <a target=\"_blank\" href=\"%3$s\">Preview %1$s</a>"
+msgstr ""
+
+#: includes/class-slgf-base-post-type.php:247
+#: includes/class-slgf-base-post-type.php:259
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:249
+msgid "%1$s draft updated. <a target=\"_blank\" href=\"%2$s\">Preview %1$s</a>"
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:255
+msgid "%1$s published."
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:257
+msgid "%1$s submitted."
+msgstr ""
+
+#. translators: Publish box date format, see http:php.net/date.
+
+#: includes/class-slgf-base-post-type.php:259
+msgid "%1$s scheduled for: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: %s Post type singular name.
+
+#: includes/class-slgf-base-post-type.php:261
+msgid "%1$s draft updated."
+msgstr ""
+
+#. translators: %1$s number of post count, %2$s Post type singular name, %3$s
+#. Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:281
+msgid "%1$s %2$s updated."
+msgid_plural "%1$s %3$s updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s number of post count, %2$s Post type singular name, %3$s
+#. Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:283
+msgid "%1$s %2$s not updated, somebody is editing it."
+msgid_plural "%1$s %3$s not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s number of post count, %2$s Post type singular name, %3$s
+#. Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:285
+msgid "%1$s %2$s permanently deleted."
+msgid_plural "%1$s %3$s permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s number of post count, %2$s Post type singular name, %3$s
+#. Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:287
+msgid "%1$s %2$s moved to the Trash."
+msgid_plural "%1$s %3$s moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s number of post count, %2$s Post type singular name, %3$s
+#. Post type plural name.
+
+#: includes/class-slgf-base-post-type.php:289
+msgid "%1$s %2$s restored from the Trash."
+msgid_plural "%1$s %3$s restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: Custom post type label.
+
+#: includes/class-slgf-base-post-type.php:359
+msgid "%s Title"
+msgstr ""
+
+#: includes/class-slgf-base-taxonomy.php:80
+#: includes/class-slgf-base-taxonomy.php:84
+#: includes/class-slgf-base-taxonomy.php:88
+msgid "It is required to pass a single, plural and slug string to Taxonomy_Core"
+msgstr ""
+
+#. translators: %s Taxonomy singular name.
+
+#: includes/class-slgf-base-taxonomy.php:130
+msgid "Update %s"
+msgstr ""
+
+#. translators: %s Taxonomy singular name.
+
+#: includes/class-slgf-base-taxonomy.php:134
+msgid "New %s Name"
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:136
+msgid "No %s found."
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:142
+msgid "Parent %s"
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:148
+msgid "Popular %s"
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:150
+msgid "Separate %s with commas"
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:152
+msgid "Add or remove %s"
+msgstr ""
+
+#. translators: %s Taxonomy plural name.
+
+#: includes/class-slgf-base-taxonomy.php:154
+msgid "Choose from the most used %s"
+msgstr ""
+
+#: includes/class-slgf-customer-category.php:44
+msgid "Category"
+msgstr ""
+
+#: includes/class-slgf-customer-category.php:45
+msgid "Categories"
+msgstr ""
+
+#: includes/class-slgf-customer-info.php:40
+msgid "Customer Info"
+msgstr ""
+
+#: includes/class-slgf-customer-tag.php:44
+msgid "Tag"
+msgstr ""
+
+#: includes/class-slgf-customer-tag.php:45
+msgid "Tags"
+msgstr ""
+
+#: includes/class-slgf-customer.php:45
+msgid "Customer"
+msgstr ""
+
+#: includes/class-slgf-customer.php:46
+msgid "Customers"
+msgstr ""
+
+#: includes/class-slgf-customer.php:68 includes/class-slgf-shortcode.php:306
+msgid "Phone Number"
+msgstr ""
+
+#: includes/class-slgf-customer.php:69 includes/class-slgf-shortcode.php:318
+msgid "Email Address"
+msgstr ""
+
+#: includes/class-slgf-customer.php:70 includes/class-slgf-shortcode.php:330
+msgid "Desired Budget"
+msgstr ""
+
+#: includes/class-slgf-customer.php:71 includes/class-slgf-shortcode.php:356
+msgid "Submit Date Time"
+msgstr ""
+
+#. translators: %s is field name.
+
+#: includes/class-slgf-shortcode.php:88
+msgid "%s field is required"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:126
+msgid "Thank you, your submission has been received"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:142
+msgid "input is required"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:143
+msgid "input is invalid"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:172
+msgid "Submit"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:294
+msgid "Full Name"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:300
+msgid "Enter your full name"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:312
+msgid "Enter your phone number"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:324
+msgid "Enter your email address"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:336
+msgid "Enter your desired budget"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:342
+msgid "Message"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:348
+msgid "Enter your message"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:393
+msgid "API response is empty"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:400
+msgid "Error while decoding API response"
+msgstr ""
+
+#: includes/class-slgf-shortcode.php:411
+msgid "Unable to get user local time"
+msgstr ""
+
+#. translators: %s URL to plugin managment admin page.
+
+#: includes/class-slgf.php:266
+msgid "Simple Lead Gen Form is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "Simple Lead Gen Form"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/sofyansitorus/Simple-Lead-Gen-Form"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A Simple Lead Gen Form Plugin for WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sofyan Sitorus"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/sofyansitorus"
+msgstr ""
