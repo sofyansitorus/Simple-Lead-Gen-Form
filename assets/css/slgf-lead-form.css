@@ -130,8 +130,10 @@
     @media only screen and (min-width: 45em) {
       .slgf-form button {
         width: 70%;
-        margin-left: 30%; } }
-    .slgf-form button.is-loading, .slgf-form button:disabled, .slgf-form button:hover {
+        margin-left: 30%; }
+        .slgf-form button:disabled, .slgf-form button:hover {
+          background: #767676; } }
+    .slgf-form button.is-loading {
       background: #767676; }
     .slgf-form button:focus {
       outline: none; }
@@ -149,7 +151,7 @@
     .slgf-form button.is-loading {
       padding: 0; }
       .slgf-form button.is-loading .text {
-        display: none; }
+        display: none !important; }
       .slgf-form button.is-loading .spinner {
         display: inline-block; }
   .slgf-form .slgf-alertbox {
@@ -207,3 +209,5 @@
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
+/*# sourceMappingURL=slgf-lead-form.css.map */

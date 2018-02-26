@@ -164,10 +164,12 @@ $breakpoint-large: 60em; // 960px
         @media only screen and (min-width: $breakpoint-med) {
             width: 70%;
             margin-left: 30%;
+            &:disabled,
+            &:hover {
+                background: #767676;
+            }
         }
-        &.is-loading,
-        &:disabled,
-        &:hover {
+        &.is-loading {
             background: #767676;
         }
         &:focus {
@@ -187,7 +189,7 @@ $breakpoint-large: 60em; // 960px
         &.is-loading {
             padding: 0;
             .text {
-                display: none;
+                display: none !important;
             }
             .spinner {
                 display: inline-block;
