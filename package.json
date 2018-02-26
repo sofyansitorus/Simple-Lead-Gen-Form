@@ -1,53 +1,31 @@
 {
-	"name": "simple-lead-gen-form",
-	"title": "Simple Lead Gen Form",
-	"version": "0.0.1",
-	"description": "A Simple Lead Gen Form Plugin for WordPress",
-	"author": {
-		"name": "Sofyan Sitorus",
-		"url": "https://github.com/sofyansitorus"
-	},
-	"license": "GPLv2",
-	"devDependencies": {
-		"autoprefixer": "latest",
-		"babel-core": "^6.26.0",
-		"babel-preset-latest": "latest",
-		"bourbon": "latest",
-		"bourbon-neat": "latest",
-		"browser-sync": "latest",
-		"css-mqpacker": "latest",
-		"del": "latest",
-		"eslint-config-wordpress": "latest",
-		"glob": "latest",
-		"gulp": "latest",
-		"gulp-autoprefixer": "^4.1.0",
-		"gulp-babel": "latest",
-		"gulp-cheerio": "latest",
-		"gulp-concat": "latest",
-		"gulp-cssnano": "latest",
-		"gulp-eslint": "latest",
-		"gulp-imagemin": "latest",
-		"gulp-notify": "latest",
-		"gulp-plumber": "latest",
-		"gulp-postcss": "latest",
-		"gulp-rename": "latest",
-		"gulp-sass": "latest",
-		"gulp-sass-lint": "latest",
-		"gulp-sort": "latest",
-		"gulp-sourcemaps": "latest",
-		"gulp-svgmin": "latest",
-		"gulp-svgstore": "latest",
-		"gulp-uglify": "latest",
-		"gulp-util": "latest",
-		"gulp-wp-pot": "latest",
-		"gulp.spritesmith": "latest",
-		"install": "^0.10.4",
-		"load-grunt-tasks": "latest",
-		"npm": "^5.6.0"
-	},
-	"scripts": {
-		"test": "dockunit",
-		"preversion": "npm test",
-		"version": "grunt version && git add ."
-	}
+  "name": "slgf",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofyansitorus/Simple-Lead-Gen-Form.git"
+  },
+  "author": "Sofyan Sitorus <sofyansitorus@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofyansitorus/Simple-Lead-Gen-Form/issues"
+  },
+  "homepage": "https://github.com/sofyansitorus/Simple-Lead-Gen-Form#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-header": "^2.0.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  }
 }
