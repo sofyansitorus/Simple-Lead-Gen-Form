@@ -3,7 +3,7 @@
 
 A Simple Lead Gen Form Plugin for WordPress
 
-**Contributors:** [sofyan sitorus](https://profiles.wordpress.org/sofyan sitorus)<br>
+**Contributors:** [sofyan sitorus](https://profiles.wordpress.org/sofyansitorus)<br>
 **Tags:** [lead-form](https://wordpress.org/plugins/tags/lead-form)<br>
 **Requires at least:** 4.4<br>
 **Tested up to:** 4.9.4<br>
