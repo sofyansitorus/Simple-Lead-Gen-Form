@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sofyansitorus/Simple-Lead-Gen-Form#readme",
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^10.4.14",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.2",
